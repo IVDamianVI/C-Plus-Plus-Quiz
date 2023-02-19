@@ -254,7 +254,7 @@ const possibleExercises = [
             + "a = --b + a;\n"
             + 'cout << a << b;\n'
             + "\nreturn 0;",
-        expected: "32",
+        expected: "116",
         explanation: "Objaśnienie: Ten kod inicjuje dwie zmienne całkowite a i b odpowiednio na 0 i 2. Następnie mnoży wartość b przez 2 i przypisuje wynik do a. Wartość a jest następnie zwiększana o 1 i dodawana do pierwotnej wartości b, a wynik jest przypisywany do b. Na koniec wartość b jest zmniejszana o 1 i dodawana do bieżącej wartości a, a wynikowe wartości aib są wyprowadzane do konsoli.",
     },
 ];
