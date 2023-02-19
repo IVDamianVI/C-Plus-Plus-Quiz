@@ -70,7 +70,8 @@ bottomCode {
 }
 
 .check-button,
-.help-button {
+.help-button,
+#cheat-button {
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -82,7 +83,8 @@ bottomCode {
 }
 
 .check-button:hover,
-.help-button:hover {
+.help-button:hover,
+#cheat-button:hover {
     font-weight: bolder;
 }
 
@@ -103,20 +105,39 @@ bottomCode {
     background-color: #cf9b00;
 }
 
+#cheat-button {
+    background-color: #3f3f3f;
+    position: absolute;
+    top: 30px;
+    left: 70%;
+}
+
+#cheat-button:hover {
+    background-color: #2d2d2d;
+}
+
 .result {
     margin-top: 5px;
     font-weight: bold;
 }
 
 #cheat {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 30%;
+    left: 25%;
+    right: auto;
+    padding: 15px;
     position: fixed;
-    top: 50px;
-    left: 80%;
-    opacity: 0%;
+    opacity: 100%;
     transition: 0.3s;
+    display: none;
+    height: 100%;
 }
 
 #cheat-text {
+    padding-top: 200px;
     font-family: Consolas;
 }
 
@@ -125,7 +146,7 @@ bottomCode {
     cursor: help;
 }
 
-p{
+p {
     margin: 0;
     padding: 0;
 }

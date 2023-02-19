@@ -234,3 +234,15 @@ selectedExercises.forEach((exercise, index) => {
 
     exercisesContainer.appendChild(exerciseDiv);
 });
+
+const div = document.getElementById("cheat");
+const cheatButton = getElementById("cheat-button");
+function toggleDiv() {
+    if (div.style.display == "none") {
+        div.style.display = "block";
+        document.getElementById("cheat-button").style.backgroundColor = "red";
+    } else {
+        div.style.display = "none";
+        document.getElementById("cheat-button").style.backgroundColor = "#3f3f3f";
+    }
+}
