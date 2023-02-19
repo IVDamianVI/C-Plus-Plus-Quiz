@@ -125,6 +125,11 @@ bottomCode {
     cursor: help;
 }
 
+p{
+    margin: 0;
+    padding: 0;
+}
+
 h3,
 li {
     margin: 0;

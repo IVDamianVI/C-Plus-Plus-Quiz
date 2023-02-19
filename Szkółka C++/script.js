@@ -213,10 +213,10 @@ selectedExercises.forEach((exercise, index) => {
         const result = document.createElement("p");
         result.classList.add("result");
         if (inputValue === expectedValue) {
-            result.innerText = "Dobrze!";
+            result.innerText = `"${inputValue}" to dobra odpowiedź!`;
             result.style.color = "#4CAF50";
         } else {
-            result.innerText = "Źle!";
+            result.innerText = `"${inputValue}" to zła odpowiedź.`;
             result.style.color = "#f44336";
         }
         expressionDiv.appendChild(result);
