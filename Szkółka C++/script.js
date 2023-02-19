@@ -1,7 +1,7 @@
 const possibleExercises = [
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int x = 5, y = 0;\n"
             + "x++;\n"
@@ -9,7 +9,7 @@ const possibleExercises = [
             + "x += y\n"
             + 'cout << x;\n'
             + "\nreturn 0;",
-        expected: "7",
+        expected: "16",
         explanation: "Objaśnienie: Ten program inicjuje dwie zmienne całkowite, x o wartości 5 i y o wartości 0. "
             + "Następnie zwiększa wartość x o 1 za pomocą operatora ++. "
             + "W rezultacie wartość x wynosi 6. Następnie program przypisuje wartość ++x + 2 do y. "
@@ -19,7 +19,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int y = 10;\n"
             + "y--;\n"
@@ -30,7 +30,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int z = 3;\n"
             + "z += 2;\n"
@@ -41,7 +41,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int a = 7;\n"
             + "a -= 3;\n"
@@ -54,7 +54,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int a = 10, b = 5;\n"
             + "int c = ++a - b--;\n"
@@ -68,7 +68,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int x = 5, y = 2;\n"
             + "int z = x++ + ++y;\n"
@@ -81,7 +81,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int n = 5;\n"
             + "for (int i = 0; i < n; i++) {\n"
@@ -96,7 +96,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int x = 5;\n"
             + "float y = 3.14;\n"
@@ -111,7 +111,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "float a = 3.14;\n"
             + "int b = a;\n"
@@ -122,7 +122,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int x = 5, y = 0;\n"
             + "x++;\n"
@@ -134,7 +134,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int a = 3, b = 5;\n"
             + "float c = a / b;\n"
@@ -145,7 +145,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "double a = 1.23;\n"
             + "int b = a;\n"
@@ -156,7 +156,7 @@ const possibleExercises = [
     },
     {
         exerciseText:
-            "Co zostanie wypisane w konsoli?",
+            "Co zostanie wydrukowane w konsoli?",
         expression:
             "int a = 7, b = 3;\n"
             + "int c = a % b;\n"
@@ -164,6 +164,55 @@ const possibleExercises = [
             + "\nreturn 0;",
         expected: "1",
         explanation: "Objaśnienie: Ten program inicjalizuje dwie zmienne całkowite a i b z odpowiednio 7 i 3. Oblicza resztę z dzielenia przez b za pomocą operatora modulo % i przypisuje wynik do zmiennej całkowitej c. Reszta z 7 dzielona przez 3 to 1, więc wynikiem programu jest 1.",
+    },
+    {
+        exerciseText:
+            "Co zostanie wydrukowane w konsoli?",
+        expression:
+            "int x = 5;\n"
+            + "int y = ++x;\n"
+            + "y = x--;\n"
+            + 'cout << y;\n'
+            + "\nreturn 0;",
+        expected: "6",
+        explanation: "Objaśnienie: x jest zwiększane do 6 za pomocą ++x, a następnie przypisywane do y. Następnie x jest zmniejszane do 5 przez x--. Ostatecznie wartość x (która wynosi 5) jest przypisywana do y, więc wynikiem jest 6.",
+    },
+    {
+        exerciseText:
+            "Co zostanie wydrukowane w konsoli?",
+        expression:
+            "int x = 2;\n"
+            + "x *= 3;\n"
+            + "x /= 2;\n"
+            + 'cout << x++;\n'
+            + "\nreturn 0;",
+        expected: "3",
+        explanation: "Objaśnienie: x jest najpierw mnożone przez 3 za pomocą złożonego operatora przypisania *= i staje się 6. Następnie jest dzielone przez 2 za pomocą złożonego operatora przypisania /= i staje się 3. Na koniec wartość x (która wynosi 3) jest drukowana z cout << x++, a następnie zwiększono do 4.",
+    },
+    {
+        exerciseText:
+            "Co zostanie wydrukowane w konsoli?",
+        expression:
+            "int x = 5;\n"
+            + "int y = x++ + ++x;\n"
+            + 'cout << y;\n'
+            + "\nreturn 0;",
+        expected: "12",
+        explanation: "Objaśnienie: x++ zwraca wartość x (czyli 5), a następnie zwiększa ją do 6. ++x zwiększa wartość x do 7, a następnie ją zwraca. Dlatego y ma przypisaną wartość 5 + 7, czyli 12. Następnie program wypisze wartość y, czyli 12.",
+    },
+    {
+        exerciseText:
+            "Co zostanie wydrukowane w konsoli?",
+        expression:
+            "int a = 0;\n"
+            + "int b = 2;\n"
+            + "a = b * 2;\n"
+            + "b = --b + a;\n"
+            + "a = --b + a;\n"
+            + 'cout << a << b;\n'
+            + "\nreturn 0;",
+        expected: "116",
+        explanation: "Objaśnienie: x++ zwraca wartość x (czyli 5), a następnie zwiększa ją do 6. ++x zwiększa wartość x do 7, a następnie ją zwraca. Dlatego y ma przypisaną wartość 5 + 7, czyli 12. Następnie program wypisze wartość y, czyli 12.",
     },
 ];
 
