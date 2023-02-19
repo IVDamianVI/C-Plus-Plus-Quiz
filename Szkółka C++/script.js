@@ -214,6 +214,49 @@ const possibleExercises = [
         expected: "116",
         explanation: "Objaśnienie: x++ zwraca wartość x (czyli 5), a następnie zwiększa ją do 6. ++x zwiększa wartość x do 7, a następnie ją zwraca. Dlatego y ma przypisaną wartość 5 + 7, czyli 12. Następnie program wypisze wartość y, czyli 12.",
     },
+    {
+        exerciseText:
+            "Co zostanie wydrukowane w konsoli?",
+        expression:
+            "int a, b, c = 2;\n"
+            + "a = 2 + 3 + c;\n"
+            + "b = ++c + 2 + a;\n"
+            + "c++;\n"
+            + "x = a + b + c;\n"
+            + 'cout << x;\n'
+            + "\nreturn 0;",
+        expected: "23",
+        explanation: "Objaśnienie: Program deklaruje trzy zmienne całkowite a, b i c i inicjalizuje c na 2. Następnie dodaje 2 + 3 + c, aby otrzymać wartość a, która wynosi 7. Następnie zwiększa c do 3 i dodaje do 2 + a, aby uzyskać wartość b, która wynosi 12. Następnie ponownie zwiększa wartość c do 4. Na koniec dodaje a, b i c, aby uzyskać wartość x, która wynosi 23. Ta wartość jest następnie drukowana do konsola.",
+    },
+    {
+        exerciseText:
+            "Co zostanie wydrukowane w konsoli?",
+        expression:
+            "int wynik = 0;\n"
+            + "float x = 0;\n"
+            + "for(int i = 0; i <= 10; i++){\n"
+            + "\twynik++;\n"
+            + "}\n"
+            + "x = ++x + wynik;\n"
+            + 'cout << x;\n'
+            + "\nreturn 0;",
+        expected: "12",
+        explanation: "Objaśnienie: Ten kod inicjalizuje zmienną całkowitą wynik na 0, a zmienną zmiennoprzecinkową x na 0. Następnie wchodzi w pętlę for, która wykona się 11 razy, za każdym razem zwiększając wartość wyniku o 1. Po zakończeniu pętli wartość x jest ustawiana na ++x + wynik, co zwiększa wartość x o 1 i dodaje końcową wartość wyniku. Na koniec program wyświetla wartość x na konsoli.",
+    },
+    {
+        exerciseText:
+            "Co zostanie wydrukowane w konsoli?",
+        expression:
+            "int a = 0;\n"
+            + "int b = 2;\n"
+            + "a = b * 2;\n"
+            + "b = ++a + b;\n"
+            + "a = --b + a;\n"
+            + 'cout << a << b;\n'
+            + "\nreturn 0;",
+        expected: "32",
+        explanation: "Objaśnienie: Ten kod inicjuje dwie zmienne całkowite a i b odpowiednio na 0 i 2. Następnie mnoży wartość b przez 2 i przypisuje wynik do a. Wartość a jest następnie zwiększana o 1 i dodawana do pierwotnej wartości b, a wynik jest przypisywany do b. Na koniec wartość b jest zmniejszana o 1 i dodawana do bieżącej wartości a, a wynikowe wartości aib są wyprowadzane do konsoli.",
+    },
 ];
 
 const shuffledExercises = possibleExercises.sort(() => Math.random() - 0.5);
